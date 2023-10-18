@@ -26,6 +26,10 @@ jobs:
             #path: <folder of choice>
             #token: ${{ secrets.SEC_TOKEN }}
 
+        - name: install pytest
+          run: |
+            pip3 install pytest
+
         - name: Run test
           run: |
             pytest test_calculator.py
