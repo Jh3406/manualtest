@@ -1,4 +1,4 @@
-name: Start
+name: Owntest
 on:
     push:
         branches: [main]
