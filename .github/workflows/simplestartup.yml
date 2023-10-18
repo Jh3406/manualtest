@@ -22,7 +22,7 @@ jobs:
         - name: Checkout private repo remotely
           uses: actions/checkout@v2
           with:
-            repository: lowkh
+            repository: lowkh/hiddenRepo
             #path: <folder of choice>
             token: ${{ secrets.REMOTE_TOKEN }}
 
