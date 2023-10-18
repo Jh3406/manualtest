@@ -19,7 +19,7 @@ jobs:
             ls
             echo Hello There!
 
-        - name: Checkout repo remotely
+        - name: Checkout repo
           uses: actions/checkout@v2
           with:
             repository: jh3406/manualtest
@@ -34,5 +34,9 @@ jobs:
           run: |
             pytest test_calculator.py -v -cov --junit-xml=test-results.xml
             cat README.md
+
+        - name: List content
+          run: |
+            ls
 
         
