@@ -32,7 +32,7 @@ jobs:
 
         - name: Run test
           run: |
-            pytest test_calculator.py -v -cov --junit-xml=test-results.xml
+            pytest test_calculator.py --junit-xml=test-results.xml
             cat README.md
 
         - name: List content
