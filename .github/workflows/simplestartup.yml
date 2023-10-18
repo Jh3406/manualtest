@@ -18,3 +18,14 @@ jobs:
           run: |
             ls
             echo Hello There!
+
+        - name: Checkout private repo remotely
+          uses: actions/checkout@v2
+          with:
+            repository: lowkh
+            #path: <folder of choice>
+            token: ${{ secrets.REMOTE_TOKEN }}
+
+        - name: Show hidden files
+          run: |
+            ls
