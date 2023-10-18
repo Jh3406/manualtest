@@ -1,4 +1,4 @@
-name: Simple Start Up
+name: Start
 on:
     push:
         branches: [main]
