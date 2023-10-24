@@ -38,11 +38,25 @@ jobs:
         - name: List content
           run: |
             ls
+            pwd
 
         - name: Publish Test Results
           uses: EnricoMi/publish-unit-test-result-action/composite@v2
           if: always()
           with:
             junit_files: "test-results.xml"
+
+        - name: create folder
+          run: mkdir downloads
+          
+      
+        - name: move files
+          run: mv *.xml ./downloads
+            
+        - name: Upload document
+          uses: actions/upload-artifact@v2
+          with: 
+              name: assetDocuments
+              path: downloads
 
         
